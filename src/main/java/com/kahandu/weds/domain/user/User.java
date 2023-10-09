@@ -4,6 +4,7 @@ import com.kahandu.weds.domain.company.Company;
 import com.kahandu.weds.domain.company.product.Product;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
+import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
@@ -15,7 +16,7 @@ import java.util.List;
 public class User {
 
     @Id
-    private BigInteger id;
+    private String id;
     private String firstName;
     private String lastName;
 
@@ -40,7 +41,7 @@ public class User {
     private List<Roles> roles;
 
 
-    List<Integer> subscriptions = new ArrayList<>();
+    List<String> subscriptions = new ArrayList<>();
 
 
     public String getFirstName() {
@@ -116,11 +117,11 @@ public class User {
         this.roles = roles;
     }
 
-    public BigInteger getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(BigInteger id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -133,11 +134,11 @@ public class User {
     }
 
 
-    public List<Integer> getSubscriptions() {
+    public List<String> getSubscriptions() {
         return subscriptions;
     }
 
-    public void setSubscriptions(List<Integer> subscriptions) {
+    public void setSubscriptions(List<String> subscriptions) {
         this.subscriptions = subscriptions;
     }
 
