@@ -14,7 +14,7 @@ import java.util.List;
 public class Company {
 
     @Id
-    private BigInteger id;
+    private String id;
     @Field("name")
     @Indexed(unique = true,sparse = true)
     private String name;
@@ -73,11 +73,11 @@ public class Company {
         this.companyKeywords = companyKeywords;
     }
 
-    public BigInteger getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(BigInteger id) {
+    public void setId(String id) {
         this.id = id;
     }
 }

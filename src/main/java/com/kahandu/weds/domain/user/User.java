@@ -6,6 +6,7 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.DocumentReference;
 import org.springframework.data.mongodb.core.mapping.Field;
 
 import java.math.BigInteger;
@@ -34,6 +35,8 @@ public class User {
     @Indexed(unique = true)
     private String email;
 
+
+    @DocumentReference
     private List<Product> userProductList;
 
     private List<Company> companies;

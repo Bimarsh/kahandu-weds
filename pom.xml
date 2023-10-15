@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.kahandu.weds</groupId>
-	<artifactId>kahandu-weds</artifactId>
+	<artifactId>kahandu-ecom</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>kahandu-weds</name>
-	<description>wedding based processor</description>
+	<name>kahandu-ecom</name>
+	<description>Ecom backend processor</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>

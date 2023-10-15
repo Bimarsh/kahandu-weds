@@ -4,6 +4,7 @@ import com.kahandu.weds.domain.company.Company;
 import com.kahandu.weds.domain.company.product.Product;
 import com.kahandu.weds.domain.user.User;
 import com.kahandu.weds.repository.UserRepository;
+import com.kahandu.weds.service.UserServiceImpl;
 import net.bytebuddy.utility.RandomString;
 import org.instancio.FieldSelectorBuilder;
 import org.instancio.Instancio;
@@ -18,12 +19,15 @@ import org.springframework.boot.test.context.SpringBootTest;
 import java.util.List;
 import java.util.Random;
 
-@DataMongoTest
-//@SpringBootTest
+//@DataMongoTest
+@SpringBootTest
 class KahanduWedsApplicationTests {
 
     private static Random random = new Random();
 
+
+    @Autowired
+    UserServiceImpl userService;
 
     @Autowired
     UserRepository userRepository;

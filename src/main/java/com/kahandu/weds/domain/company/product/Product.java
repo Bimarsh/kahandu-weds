@@ -1,7 +1,10 @@
 package com.kahandu.weds.domain.company.product;
 
+import com.kahandu.weds.domain.user.User;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.DocumentReference;
 
 import java.math.BigInteger;
 import java.util.List;
@@ -11,9 +14,10 @@ import java.util.List;
 public class Product {
 
     @Id
-    private BigInteger id;
+    private String id;
     private String packageName;
 
+    private String productType;
     private String packageDetails;
 
     private  String packageKeywords;
@@ -97,11 +101,20 @@ public class Product {
         this.productKeywords = productKeywords;
     }
 
-    public BigInteger getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(BigInteger id) {
+    public void setId(String id) {
         this.id = id;
+    }
+
+
+    public String getProductType() {
+        return productType;
+    }
+
+    public void setProductType(String productType) {
+        this.productType = productType;
     }
 }
